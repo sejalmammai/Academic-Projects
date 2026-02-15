@@ -1,0 +1,56 @@
+package Substring;
+
+import java.util.Scanner;
+
+public class Substring {
+
+	public static void main(String[] args) {
+		
+		Scanner scanner = new Scanner(System.in);
+				
+		System.out.print("Input a String: ");
+		String s1 = scanner.nextLine();
+		
+		System.out.print("Input a Substring: ");
+		String s2 = scanner.nextLine();
+				
+		boolean substring = false;
+		
+		if (s2.length() > s1.length()) {
+			substring = false;
+		}
+		
+		else {
+			
+			for (int i = 0; i < s1.length(); i++) {
+				
+				boolean charMatch = true;
+				
+				for (int j = 0; j < s2.length(); j++) {
+					
+					if (s2.charAt(j) != s1.charAt(i + j)) {
+						
+						charMatch = false;
+						break;
+						
+					}
+					
+				}
+				
+				if (charMatch == true) {
+					substring = true;
+				}
+				
+			}
+			
+		}
+		
+		System.out.println(substring);
+
+	}
+		
+		
+		
+}
+
+
