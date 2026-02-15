@@ -1,0 +1,43 @@
+package Pow;
+import java.util.Scanner;
+
+public class Pow {
+
+	public static void main(String[] args) {
+		
+		Scanner scanner = new Scanner(System.in);
+		
+		System.out.print("First, input a base number: ");
+		double num = scanner.nextDouble();
+		
+		System.out.print("Now, input an exponent number: ");
+		double exp = scanner.nextDouble();
+		
+		double result = 1;
+		
+		if (exp > 0) {
+			
+			for (int i = 1; i <= exp; i++) {
+				result *= num;
+			}
+			
+		}
+		
+		else {
+			
+			
+			for (int i = 1; i <= Math.abs(exp); i++) {
+				result *= num;
+			}
+			
+			result = 1/result;
+			
+		}
+		
+		System.out.println(result);
+
+	}
+
+}
+
+
