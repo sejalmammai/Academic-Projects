@@ -1,0 +1,45 @@
+package Palindrome;
+import java.util.Scanner;
+
+public class Palindrome {
+
+	public static void main(String[] args) {
+		
+		Scanner scanner = new Scanner(System.in);
+		
+		System.out.print("Input a Word: ");
+		String s1 = scanner.nextLine();
+		
+		boolean palindromeStatus = true;
+		
+		int endingIndex = s1.length() - 1;
+		
+		
+		if (palindromeStatus == true) {
+			
+			for (int i = 0; i < s1.length()/2 && i < endingIndex; i++) {
+				
+				if (s1.charAt(i) == s1.charAt(endingIndex)) {
+					
+					endingIndex--;
+					
+				}
+				
+				else {
+					
+					palindromeStatus = false;
+					
+				}
+				
+			}
+			
+		}
+		
+		System.out.println(palindromeStatus);
+		
+	}
+
+}
+
+
+
