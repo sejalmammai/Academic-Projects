@@ -1,0 +1,46 @@
+package binaryConverter;
+
+public class BinaryConverter {
+
+	public static void main(String[] args) {
+
+		int[] array = {1, 0, 1, 1, 0};
+		binaryToDecimal(array);
+		
+	}
+	
+	public static int binaryToDecimal(int[] arr) {
+		
+		int partialSum = 0;
+		
+		for (int i = arr.length - 1; i >= 0; i--) {
+			
+			int exponent = arr.length - 1 - i;
+			int product = 1;
+			
+			if (exponent == 0) {
+				product = 1;
+			}
+			
+			else {
+				
+				for (int j = 1; j <= exponent; j++) {
+					product *= 2;
+				}	
+				
+			}
+			
+		partialSum += (product * arr[i]);
+			
+		}
+		
+		System.out.println(partialSum);
+		return partialSum;
+		
+	}
+
+}
+
+
+
+
