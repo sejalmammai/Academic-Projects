@@ -1,0 +1,40 @@
+package Prime;
+import java.util.Scanner;
+
+public class Prime {
+
+	public static void main(String[] args) {
+		
+		Scanner scanner = new Scanner(System.in);
+		
+		System.out.print("First, please input a number into the program to check whether it is prime: ");
+		int num = scanner.nextInt();
+		
+		boolean isPrime = false;
+		int factors = 0;
+		
+		for (int i = 1; i <= num; i++) {
+			
+			if (num % i == 0) {
+				factors++;
+			}
+			
+		}
+		
+		if (factors == 2) {
+			isPrime = true;
+			System.out.println(isPrime);
+		}
+		
+		if (num == 1 || factors > 2) {
+			isPrime = false;
+			System.out.println(isPrime);
+		}
+		
+		
+	}
+
+}
+
+
+
