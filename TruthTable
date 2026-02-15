@@ -1,0 +1,36 @@
+package truthTable;
+
+public class TruthTable {
+
+	public static void main(String[] args) {
+
+		boolean first = Boolean.parseBoolean(args[0]);
+		String operator = args[1];
+		boolean second = Boolean.parseBoolean(args[2]);
+		
+		boolean value = false;
+		
+		switch (operator) {
+			
+			case "&&":
+				value = first && second;
+				break;
+			case "||":
+				value = first || second;
+				break;
+			case "==":
+				value = first == second;
+				break;
+			case "!=": 
+				value = first != second;
+				break;
+			case "^":
+				value = first ^ second;
+				break;
+		}
+		
+		System.out.println(value);
+
+	}
+	
+}
